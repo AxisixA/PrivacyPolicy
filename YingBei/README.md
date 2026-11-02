@@ -1,75 +1,76 @@
-# Yingbei 英文协议网页
+# Yingbei 英文法律页面
 
-适用于 Shenzhen Yingbei Network Technology Co., LTD 旗下链接至这些协议的多个 App；正文点名包含 Arrow Melody，后续同类产品可复用。
+公司旗下多个 App 共用，当前点名包含 Arrow Melody；正文适用于由本公司发布、并链接至本协议的 App。
 
-## 文件
+## 文件及部署
 
-- `privacy-policy.html`：英文隐私政策，包含 SDK 披露、广告/统计同意、平台账号、内购、保存及删除、地区权利和儿童条款。
+- `privacy-policy.html`：英文隐私政策。
 - `user-agreement.html`：英文用户协议 / Terms of Use。
-- `styles.css`：两页共用样式，适配手机和打印。
+- `data-deletion.html`：英文账号与数据删除申请说明，包含预填邮件模板。
+- `styles.css`：三个页面共用样式，支持手机与打印。
 
-无需构建或依赖安装。正文直接写在 HTML 中，没有 JavaScript、外部字体、图片、广告或统计脚本。页面本身不设置 Cookie 或浏览器本地存储；上线后的服务器访问日志需要按实际托管配置处理。
+将上述四个文件按原有相对路径部署到公开 HTTPS 静态网站即可，无需构建。商店分别填写对应文件的公开 URL；Google Play 外部数据删除资源建议直接使用 `data-deletion.html`。
 
-## 已依据用户确认的信息编写
+本次只创建本地网页，未部署公网，也未改动游戏项目或商店后台。页面没有 JavaScript、外部字体、图片、广告、统计脚本、Cookie 或本地存储；托管服务的访问日志属于单独的数据处理活动，需要按实际配置披露。
 
-- 公司旗下多个 App 通用，当前游戏包括 Arrow Melody。
-- 一般受众休闲游戏，不专门面向 13 岁以下儿童。
-- 统计：Google Analytics for Firebase、HUAWEI Analytics Kit、GameAnalytics。
-- 广告：HUAWEI Ads / Petal Ads、TopOn / AnyThink 聚合，广告源包括 Unity Ads、AdMob。
-- 平台服务：HUAWEI ID、Google Play Games Services、Apple Game Center。
-- 包含内购；订阅条款仅在某 App 实际提供订阅时适用。
-- 隐私及客服邮箱：yingbeiwangluo@163.com（两页均已添加可点击的邮件链接）。
+## 公司资料及来源
 
-## 发布前必须完成
+- 英文名称：Shenzhen Yingbei Network Technology Co., LTD（按用户提供的名称保留）。
+- 中文登记名称：深圳市影贝网络科技有限公司。
+- 统一社会信用代码：91440300MA5FLJAQ2U。
+- 联系邮箱：yingbeiwangluo@163.com。
+- 注册地址：深圳市宝安区西乡街道流塘社区榕树路68号流塘置地大厦1707B。
+- 注册地址英文译文：Room 1707B, Liutang Zhidi Building, No. 68 Rongshu Road, Liutang Community, Xixiang Subdistrict, Bao'an District, Shenzhen, Guangdong 518100, China.
 
-1. 两页已使用用户提供的 `yingbeiwangluo@163.com`，并设置 `mailto:` 链接。上线时确保此邮箱可以正常接收和处理隐私、客服及删除请求。
-2. 替换 `[COMPANY_POSTAL_ADDRESS]` 为公司真实对外联系地址。不要将第三方 SDK 公司的联系信息填成自己的信息。
-3. 确认各 App 使用平台登录后是否还创建/保存 Yingbei 游戏账号。将隐私页中的 `[ACCOUNT_DELETION_DETAILS]` 替换为真实的 App 内删除路径，或明确说明没有独立 Yingbei 账号及删除游戏数据的方法。不能将“解绑”“退出登录”或“冻结”写成删除账号。
-4. `[REGIONAL_REPRESENTATIVE_OR_DPO_DETAILS_IF_REQUIRED]`：按目标市场和业务情况确认是否需要欧盟/英国代表或 DPO；适用则填写，不适用则删除该句。不要凭空指定代表。
-5. 在每个发行包核对实际 SDK、版本、权限、事件、广告聚合配置和数据传输。特别核对 TopOn 中“等”所指的其他广告源：目前正文只列出了已提供的 Unity Ads、AdMob 和华为广告；实际启用其他网络必须补齐其名称、用途、数据类别和官方隐私链接。公司通用表不等于所有 App 都集成全部服务。
-6. 核对实际保存期限/判断标准、服务器地区和跨境传输安排。正文没有擅自假定 Firebase/华为后台选择了某个固定期限；如有固定期限，可进一步写入。跨境保护、加密、数据删除等承诺必须在实际流程中兑现。
-7. 确认 App 中已有独立可撤回的广告和统计选择、所需的先行告知、ATT 和必要权限控制。仅有网页不等于完成 SDK 同意管理；GameAnalytics 也有自己的初始化前同意要求。
-8. 核对用户协议中的产品示例、购买恢复能力、广告移除范围和订阅流程。当前默认中国法并保留用户所在地不可排除的消费者权利；正式发布前确认公司接受这一争议解决安排。
-9. 完成后去除两页顶部的 `.review-note` 审阅提示。`noindex` 只用于避免审阅稿被索引，正式发布可删除该 meta；它不代替访问控制，也不会阻止拥有链接的人访问页面。
+地址和信用代码依据用户于 2026-11-02 提供的[企查查公司详情链接](https://www.qcc.com/firm/914965866f4c527576e406c767da6860.html)及该详情页工商信息截图填写。直接网页抓取返回访问拦截，完整登记字段来自用户提供的截图，并非本次独立取得的工商官网证明。英文地址是上述中文地址的译写，保留中文原址便于核对及投递。
 
-查找所有待填标记：
+截图另列一处标注“2025年报”的通信地址。本版采用登记表中的注册地址，并明确标为 Registered address；未将较早年报通信地址擅自认定为当前注册地址。网页不公开截图中的法定代表人、资本等无关信息。
 
-```sh
-rg -n '\[[A-Z_ ,]+\]' privacy-policy.html user-agreement.html
-```
+## 已完成的内容
 
-## 商店接入
+- 一般受众休闲游戏定位，不专门面向 13 岁以下儿童，同时保留当地儿童隐私保护要求。
+- 已列明用户确认的 Firebase Analytics、HUAWEI Analytics Kit、GameAnalytics、HUAWEI Ads / Petal Ads、TopOn / AnyThink、Unity Ads、AdMob，以及 HUAWEI ID、Google PGS、Apple Game Center 和商店内购。
+- 按用途说明数据类别、来源、SDK 直接收集、共享、广告与统计选择、权限、保存标准、删除、地区权利和跨境处理。
+- SDK 表为公司共用清单，以具体 App、渠道及启用配置为适用范围；未把聚合平台的整个合作伙伴目录写成本公司的已启用清单。
+- 隐私政策与用户协议独立；增加独立删除申请页，三个页面互链。
+- 已填入真实邮箱、注册地址和公司代码，清除正文占位符、审阅稿提示及 `noindex`。
+- 没有编造欧盟/英国代表、DPO 姓名、专线、服务器端点或游戏内菜单路径。隐私事务由现有公司邮箱统一承接。
 
-将两个 HTML 和 `styles.css` 一起放到自己的公开 HTTPS 静态网站，保持相对路径不变。建议提交直接地址：
+## 删除申请如何工作
 
-- 隐私政策：`https://你的域名/你的路径/privacy-policy.html`
-- 用户协议：`https://你的域名/你的路径/user-agreement.html`
-- 删除说明：`https://你的域名/你的路径/privacy-policy.html#delete-data`
+`data-deletion.html` 的按钮使用 `mailto:`，打开预填公司邮箱、主题和资料模板的邮件草稿。用户需要自行检查并发送；没有邮件客户端时，可以手动使用自己的邮箱发送。页面不会在打开邮件草稿时声称“申请已提交”，也没有伪造后台处理接口。
 
-以上域名是部署示意，尚未创建公开网站。目录中不会自动生成可提交商店的公网网址。托管应允许不登录、无地域限制地访问正文，不应通过阅读协议触发强制同意广告或统计。
+申请范围包括本公司控制的 App 账号（如存在）及关联个人数据，也支持只删除特定数据。应通过必要且适度的验证定位记录，处理公司及受托处理方持有的数据，并告知合法保留例外和完成结果。
 
-- **Google Play**：在 Play Console 和 App 中提供隐私政策链接，按每个 App 的真实 SDK 行为填写 Data safety。若该 App 提供账号创建，需提供 App 内删除入口及外部可操作的账号/数据删除渠道。页面删除锚点可作为外部说明入口；联系邮箱已填入，仍需落实接收、验证和删除处理流程。不能仅因为用了 PGS 就武断认定有或没有独立 App 账号。[Google User Data](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en)、[账号删除说明](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en)。
-- **Apple**：App Store Connect 隐私资料、隐私标签与 App 内披露要反映真实行为。提供账号创建时要有符合规则的 App 内删除流程；普通游戏不能仅靠要求用户发邮件代替。当前用户协议通过引用保留 Apple 标准 EULA，适合未在 App Store Connect 配置自定义 EULA 的情形；不要直接将此网页当作已满足 Apple 全部最低条款的自定义 EULA 上传。如果要改成自定义 EULA，需另行补齐完整最低条款及开发者地址、电话、邮箱。[App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)、[账号删除](https://developer.apple.com/help/app-review/guideline-reference/5-1-1-account-deletion/)、[标准及自定义 EULA](https://developer.apple.com/help/app-store-connect/manage-app-information/provide-a-custom-license-agreement/)、[自定义 EULA 最低条款](https://www.apple.com/legal/internet-services/itunes/dev/minterms/)。
-- **华为海外 AppGallery**：使用英文独立隐私页和用户协议页，开发者身份与商店资料一致，核对当前海外发行规则、实际 HMS Kit 和广告 SDK 披露。华为部分文档为动态页面，本次未能完整抓取海外审核指南正文；上线时仍需在开发者后台检查当前版本，不能据此声称已获得商店合规认证。[AppGallery Review Guidelines](https://developer.huawei.com/consumer/en/doc/distribution/app/30202)、[Policy Center](https://developer.huawei.com/consumer/en/policy-center/)。
+正文采用的处理目标为：**核验后的删除申请争取 30 天内完成**；法定答复期限、较短期限及依法允许的延期优先适用。这是公司需要兑现的处理承诺，不是已经测试过的自动化后台能力。应安排人员持续处理 `yingbeiwangluo@163.com` 的申请。
 
-政策文字已覆盖已知场景，无法单凭通用网页保证所有市场的法律合规或商店审核通过；最终应与实际发行包、后台设置和目标市场一致。
+只存在于设备上的进度需要使用 App 重置或设备数据删除功能清除；平台账号、平台持有的独立副本和订阅续费单独管理。页面没有将退出登录、解绑、冻结或卸载等同于删除账号。
 
-## SDK 与平台官方资料
+## 正式发行时仍需落实的产品行为
 
-网页 SDK 表内有对应的官方链接。额外核对入口：
+这些事项无法仅靠修改网页实现，也未在本次任务中修改游戏或控制台：
 
-- [Firebase 隐私与安全](https://firebase.google.com/support/privacy)：仅声明已确认的 Analytics，不因为出现 Firebase 就假设使用了 Authentication、Crashlytics 等其他服务。
-- [GameAnalytics Developer Policy](https://www.gameanalytics.com/trust/privacy-faq)：涵盖玩家同意及开发者责任；面向开发者账户的 Privacy Notice 不等同于游戏玩家数据披露。
-- [TopOn Advertising Services Privacy Policy](https://www.toponad.net/en/privacy-policy)：其支持的整个广告源目录不等于本公司的启用清单。
-- [Unity 玩家隐私政策](https://unity.com/legal/game-player-and-app-user-privacy-policy)、[Google 广告及合作方数据说明](https://policies.google.com/technologies/partner-sites?hl=en)。
-- [HMS Core Privacy Statement](https://developer.huawei.com/consumer/en/doc/hmscore-common-Guides/privacy-0000001261262707)：包含具体 Kit 的隐私声明入口。华为 SDK 的数据范围随版本、地区和权限而变；应核对海外所用版本，不能直接套用中国大陆 Ads SDK 的全部字段。
+1. **App 内账号删除**：如果某发行版提供账号创建（包括符合规则定义的自动/访客账号），需要实际可用的 App 内删除入口。普通 iOS 游戏不能仅要求用户发邮件来替代该入口。当前文案没有宣称某个未经验证的菜单路径已经存在；外部邮件页也不能作为“已完成 Apple App 内删除”的证据。[Apple 账号删除要求](https://developer.apple.com/help/app-review/guideline-reference/5-1-1-account-deletion/)。
+2. **先行同意及撤回**：确保广告、统计、ATT 及相关权限按适用规则在正确时机触发，SDK 初始化顺序与文案相符。GameAnalytics 另有玩家同意要求。[GameAnalytics Developer Policy](https://www.gameanalytics.com/trust/privacy-faq)。
+3. **最终 SDK 清单与后台**：逐个发行包核对 TopOn 实际启用的其他广告源、SDK 版本、事件、权限、保存配置和跨境安排。用户确认的“Unity、AdMob 等”并未给出其他广告源名称，因此网页未擅自将未知网络写成已集成服务。近似命名的本地旧项目不能自动视为 Arrow Melody 的当前发行包。
+4. **地区法定安排**：如果实际发行及处理触发欧盟/英国代表、DPO 或其他专项义务，需要真实任命和披露；不能靠编造联系人补齐。现有公司隐私邮箱不被描述为已经任命的境外代表。
+
+数据保存采用用途、请求和法律义务等明确判断标准，没有虚构当前 SDK 后台已配置某个固定期限。中国法条款保留用户所在地不可排除的消费者保护；购买、订阅和广告移除条款仅对实际提供的功能适用。
+
+## 商店与服务官方参考
+
+- [Google Play User Data](https://support.google.com/googleplay/android-developer/answer/10144311?hl=en)：公开可访问的隐私页面、数据披露和安全要求。[Google 账号删除资源说明](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en)：外部删除请求渠道及相关要求。
+- [Apple App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)、[Apple 标准/自定义 EULA 说明](https://developer.apple.com/help/app-store-connect/manage-app-information/provide-a-custom-license-agreement/)。当前用户协议引用保留 Apple 标准 EULA；未配置自定义 EULA 时不要把此网页当作已经满足全部 Apple 自定义 EULA 最低条款的文本提交。
+- [HUAWEI AppGallery Review Guidelines](https://developer.huawei.com/consumer/en/doc/distribution/app/30202)、[Policy Center](https://developer.huawei.com/consumer/en/policy-center/)、[HMS Core Privacy Statement](https://developer.huawei.com/consumer/en/doc/hmscore-common-Guides/privacy-0000001261262707)。部分华为动态文档无法完整抓取，应以实际海外发行版本和后台当前规则为准。
+- [Firebase 隐私](https://firebase.google.com/support/privacy)、[GameAnalytics Developer Policy](https://www.gameanalytics.com/trust/privacy-faq)、[TopOn 广告隐私](https://www.toponad.net/en/privacy-policy)、[Unity 玩家隐私](https://unity.com/legal/game-player-and-app-user-privacy-policy)、[Google 合作方数据说明](https://policies.google.com/technologies/partner-sites?hl=en)。
 - [Google PGS 数据披露](https://developer.android.com/games/pgs/data-collection)、[Game Center 隐私](https://www.apple.com/legal/privacy/data/en/game-center/)、[HUAWEI ID 隐私](https://consumer.huawei.com/minisite/cloudservice/id/common/b0/latest/privacy-statement.htm)。
 
-本次参考资料核对日期：2026-11-02。
+各商店的开发者名称、App 内实际行为及隐私标签/Data safety 填报应与页面一致。网页文案完整不等于已审计游戏全部合规性，也不构成商店审核保证。
 
-## 本次验证
+## 验证结果
 
-- 两页 HTML 标签嵌套、唯一主标题、所有本地文件链接及页内锚点检查通过。
-- 已用浏览器检查 390px 手机与 1280px 电脑布局：页面无整体横向溢出，SDK 宽表限制在独立滚动容器中。
-- 已实际点击协议互链及 SDK 目录跳转；两页不含脚本或外部加载资源。
-- 尚未部署公网；未审计游戏安装包、SDK 控制台配置或实际数据删除接口。外部官方链接已按查到的地址列入，部分华为动态文档无法完整抓取，仍需在目标地区环境复核。
+- 三页 HTML 嵌套、主标题、所有本地文件链接和页内锚点通过检查。
+- 三页均无未填写标记、审阅稿提示、旧邮箱或 `noindex`。
+- 两份协议的注册地址、信用代码及邮箱一致；删除按钮的收件地址、主题和预填模板已校验。
+- 已用浏览器实际检查三页互链、390px 手机页面及 1280px 电脑布局，无整页横向溢出。
+- 尚未验证公网部署、邮箱投递及后台删除执行；静态页不会发送或自动处理删除请求。
